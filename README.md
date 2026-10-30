@@ -6,7 +6,7 @@ Live site: https://abdurryaseen.github.io/islamic-baby-clothes/
 
 Shoppers pick a size, add items to their bag, and check out. The bag is saved in their browser.
 
-**Right now (before Stripe is connected):** "Secure checkout" opens a text message to (313) 455-0054 with the full order filled in, so orders can come in today.
+**Right now (before Stripe is connected):** "Secure checkout" shows a message that online checkout is opening soon, with the phone number to call.
 
 **To turn on card payments with Stripe (about 15 minutes, one time):**
 

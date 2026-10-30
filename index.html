@@ -497,7 +497,6 @@ body.lock{overflow:hidden}
     <div class="sub"><span>Subtotal</span><span class="amt" id="cartTotal">$0.00</span></div>
     <p class="foot-note">Shipping & taxes calculated at checkout. Every piece is handmade to order.</p>
     <button class="btn btn-primary" id="checkoutBtn">Secure checkout →</button>
-    <a class="alt" id="orderText" href="#">Or send this order to us by text</a>
   </div>
 </aside>
 <div class="toast" id="toast"></div>
@@ -507,7 +506,7 @@ const IMG='https://img1.wsimg.com/isteam/ip/869d7fc4-6045-4a2e-958a-303dee3172c6
 const SHOP='https://islamicbabyclothes.com/shop/ols/products/';
 /* ===== CHECKOUT SETTINGS =====
    Paste your Cloudflare Worker URL here once it's set up (see README.md).
-   While it's empty, "Secure checkout" sends the order to you by text instead. */
+   While it's empty, "Secure checkout" shows a "checkout opening soon" message. */
 const CHECKOUT_URL='';
 const SHOP_PHONE='+13134550054';
 const SIZES=['3–6 months','6–9 months','9–12 months','12–18 months','18–24 months','2 years','3 years','4 years','5 years','6 years','7 years','8 years'];
@@ -577,13 +576,7 @@ function render(){
         <div class="qty"><button data-q="${k}" data-d="-1" aria-label="Decrease">−</button><span>${i.qty}</span><button data-q="${k}" data-d="1" aria-label="Increase">+</button></div></div>
       <div class="right"><span class="lp">${money(p.now*i.qty)}</span><button class="rm" data-rm="${k}">Remove</button></div></div>`}).join('')
     :`<div class="empty"><div>🧺</div><p><strong>Your bag is empty</strong></p><p>Find something special for your little one.</p><br><a class="btn btn-primary" href="#shop" id="emptyShop">Start shopping</a></div>`;
-  $('orderText').href=smsLink();
 }
-function orderSummary(){
-  const lines=cart.map(i=>{const p=byId(i.id);return `${i.qty} x ${p.n} (${i.size}) - ${money(p.now*i.qty)}`});
-  return `Assalamu alaikum! I'd like to order:\n${lines.join('\n')}\nSubtotal: ${money(cart.reduce((a,i)=>a+byId(i.id).now*i.qty,0))}`;
-}
-function smsLink(){return `sms:${SHOP_PHONE}?&body=${encodeURIComponent(orderSummary())}`}
 function openCart(){$('toast').classList.remove('show');$('drawer').classList.add('open');$('overlay').classList.add('open');$('drawer').setAttribute('aria-hidden','false');document.body.classList.add('lock')}
 function closeCart(){$('drawer').classList.remove('open');$('overlay').classList.remove('open');$('drawer').setAttribute('aria-hidden','true');document.body.classList.remove('lock')}
 let tt;function toast(msg){const t=$('toast');t.innerHTML=`${msg} <a id="toastView">View bag</a>`;t.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('show'),2800);$('toastView').onclick=()=>{t.classList.remove('show');openCart()}}
@@ -597,14 +590,14 @@ $('cartBtn').onclick=openCart;$('mobileBag').onclick=openCart;$('closeCart').onc
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeCart()});
 $('checkoutBtn').onclick=async()=>{
   if(!cart.length)return;
-  if(!CHECKOUT_URL){location.href=smsLink();return}
+  if(!CHECKOUT_URL){alert('Online checkout is opening soon, in shaa Allah! To order now, please call us at (313) 455-0054.');return}
   const b=$('checkoutBtn');b.disabled=true;b.textContent='Opening secure checkout…';
   try{
     const res=await fetch(CHECKOUT_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({items:cart,origin:location.origin+location.pathname})});
     const data=await res.json();
     if(data.url){location.href=data.url;return}
     throw new Error(data.error||'Checkout unavailable');
-  }catch(err){alert('Sorry, checkout is having trouble right now. You can text us your order instead.');b.disabled=false;b.textContent='Secure checkout →'}
+  }catch(err){alert('Sorry, checkout is having trouble right now. Please try again in a moment or call us at (313) 455-0054.');b.disabled=false;b.textContent='Secure checkout →'}
 };
 if(new URLSearchParams(location.search).get('order')==='success'){cart=[];save();setTimeout(()=>toast('JazakAllah khair! Your order is confirmed 🤍'),400)}
 render();
