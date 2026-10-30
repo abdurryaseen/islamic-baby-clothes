@@ -16,19 +16,27 @@ const PRODUCTS = {
   'boys-pants':       { name: 'Boys Pants',              cents: 725 },
 };
 
-// The website address allowed to use this checkout.
-const ALLOWED_ORIGIN = 'https://abdurryaseen.github.io';
+// Website addresses allowed to use this checkout.
+const ALLOWED_ORIGINS = [
+  'https://www.islamicbabyclothes.com',
+  'https://islamicbabyclothes.com',
+  'https://abdurryaseen.github.io',
+];
+const HOME = 'https://www.islamicbabyclothes.com/';
 
-const cors = {
-  'Access-Control-Allow-Origin': ALLOWED_ORIGIN,
-  'Access-Control-Allow-Methods': 'POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type',
-};
+let cors = {};
 const json = (body, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json', ...cors } });
 
 export default {
   async fetch(request, env) {
+    const origin = request.headers.get('Origin') || '';
+    cors = {
+      'Access-Control-Allow-Origin': ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0],
+      'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Vary': 'Origin',
+    };
     if (request.method === 'OPTIONS') return new Response(null, { headers: cors });
     if (request.method !== 'POST') return json({ error: 'Method not allowed' }, 405);
 
@@ -37,8 +45,8 @@ export default {
     const items = Array.isArray(body.items) ? body.items.slice(0, 30) : [];
     if (!items.length) return json({ error: 'Your bag is empty' }, 400);
 
-    const returnUrl = typeof body.origin === 'string' && body.origin.startsWith(ALLOWED_ORIGIN)
-      ? body.origin : ALLOWED_ORIGIN + '/islamic-baby-clothes/';
+    const returnUrl = typeof body.origin === 'string' && ALLOWED_ORIGINS.some(o => body.origin === o || body.origin.startsWith(o + '/'))
+      ? body.origin : HOME;
 
     const form = new URLSearchParams();
     form.append('mode', 'payment');

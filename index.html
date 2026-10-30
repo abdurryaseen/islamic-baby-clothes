@@ -156,6 +156,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,246,238,.88);backdro
 .svc .meta span{background:var(--cream-2);padding:4px 12px;border-radius:999px;font-weight:800;font-size:.82rem}
 .svc .meta .free{background:var(--sage-d);color:#fff}
 .svc p{color:var(--muted);margin-bottom:18px}
+.svc .btn{margin:0 8px 8px 0}
 
 /* reviews CTA */
 .reviews{text-align:center}
@@ -205,7 +206,7 @@ footer a:hover{color:var(--gold)}
 .size-row{display:flex;gap:10px;align-items:center;margin-bottom:12px}
 .size-row label{font-size:.82rem;font-weight:800;color:var(--muted)}
 .size-row select{flex:1;padding:10px 12px;border-radius:12px;border:1.5px solid var(--sand);background:#fff;font:700 .92rem Nunito,sans-serif;color:var(--ink);cursor:pointer}
-.details-link{display:block;text-align:center;margin-top:10px;font-size:.85rem;font-weight:700;color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+.details-link{background:none;border:0;cursor:pointer;width:100%;font-family:inherit;display:block;text-align:center;margin-top:10px;font-size:.85rem;font-weight:700;color:var(--muted);text-decoration:underline;text-underline-offset:3px}
 .overlay{position:fixed;inset:0;background:rgba(47,58,51,.45);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:.3s;z-index:90}
 .overlay.open{opacity:1;pointer-events:auto}
 .drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:var(--cream);z-index:100;transform:translateX(100%);transition:transform .35s ease;display:flex;flex-direction:column;box-shadow:-20px 0 50px -20px rgba(0,0,0,.3)}
@@ -239,6 +240,17 @@ footer a:hover{color:var(--gold)}
 body.lock{overflow:hidden}
 @media (max-width:760px){.cart-btn .lbl{display:none}.cart-btn{padding:10px 14px}.toast{bottom:84px}}
 
+/* info modal */
+.modal{position:fixed;inset:0;z-index:110;display:none;place-items:center;padding:16px;background:rgba(47,58,51,.45)}
+.modal.open{display:grid}
+.modal-box{background:var(--cream);border-radius:24px;max-width:620px;width:100%;max-height:90vh;overflow:auto;padding:30px;position:relative;box-shadow:var(--shadow)}
+.modal-box .icon-btn{position:absolute;top:14px;right:14px}
+.modal-box h3{font-size:1.6rem;margin:6px 0 10px;padding-right:30px}
+.modal-box p{color:var(--muted);margin-bottom:16px}
+.chart{width:100%;border-collapse:collapse;font-size:.88rem;background:#fff;margin:6px 0 18px}
+.chart th,.chart td{padding:9px 8px;text-align:left;border-bottom:1px solid var(--sand);white-space:nowrap}
+.chart th{background:var(--sage-l);font-weight:800}
+.chart-wrap{overflow-x:auto}
 /* sticky mobile cta */
 .mobile-cta{display:none}
 
@@ -419,8 +431,8 @@ body.lock{overflow:hidden}
       <p>Have something special in mind? Book a quick session and we'll bring your idea to life — or learn to sew it yourself.</p>
     </div>
     <div class="svc-grid">
-      <div class="svc reveal"><div class="ic">✏️</div><div><h3>Outfit Design</h3><div class="meta"><span class="free">FREE</span><span>15 mins</span></div><p>Tell us your vision — colors, embroidery, occasion — and we'll design a custom outfit that's uniquely your child's.</p><a class="btn btn-primary" href="https://islamicbabyclothes.com/m/bookings">Book free chat</a></div></div>
-      <div class="svc reveal"><div class="ic" style="background:#f6e7cb">🪡</div><div><h3>Sewing Coaching</h3><div class="meta"><span>$25</span><span>30 mins</span></div><p>Learn the craft one-on-one. Get personal guidance on patterns, stitching and finishing your own children's clothing.</p><a class="btn btn-gold" href="https://islamicbabyclothes.com/m/bookings">Book a session</a></div></div>
+      <div class="svc reveal"><div class="ic">✏️</div><div><h3>Outfit Design</h3><div class="meta"><span class="free">FREE</span><span>15 mins</span></div><p>Tell us your vision — colors, embroidery, occasion — and we'll design a custom outfit that's uniquely your child's.</p><a class="btn btn-primary" href="tel:+13134550054">Call to book</a> <a class="btn btn-ghost" href="https://www.facebook.com/Islamicbabyclothes/">Message us</a></div></div>
+      <div class="svc reveal"><div class="ic" style="background:#f6e7cb">🪡</div><div><h3>Sewing Coaching</h3><div class="meta"><span>$25</span><span>30 mins</span></div><p>Learn the craft one-on-one. Get personal guidance on patterns, stitching and finishing your own children's clothing.</p><a class="btn btn-gold" href="tel:+13134550054">Call to book</a> <a class="btn btn-ghost" href="https://www.facebook.com/Islamicbabyclothes/">Message us</a></div></div>
     </div>
   </div>
 </section>
@@ -447,10 +459,10 @@ body.lock{overflow:hidden}
       <a href="tel:+13134550054" class="btn btn-ghost">📞 (313) 455-0054</a>
     </div>
     <div class="reveal">
-      <details open><summary>What ages and sizes do you make?</summary><p>We make clothing for babies and children from 3 months up to 8 years old. Khimars are available in sizes from 3 months all the way to adult.</p></details>
+      <details open><summary>What ages and sizes do you make?</summary><p>We make clothing for babies and children from 3 months up to 8 years old. Each product lists its sizes — our thobes come in 3–18 months and khimars in 3 months to 5 years. Need a different size? Every piece is custom made, so just call us.</p></details>
       <details><summary>Are the clothes really handmade?</summary><p>Yes — every piece is custom made by hand with love, so your child gets a unique outfit that's comfortable and made to last.</p></details>
       <details><summary>Can I request a custom design?</summary><p>Absolutely. Book a free 15-minute Outfit Design session and we'll work with you on style, colors and details.</p></details>
-      <details><summary>How do I place an order?</summary><p>Tap "Shop now" on any product to choose your size and options, then check out securely in our online store.</p></details>
+      <details><summary>How do I place an order?</summary><p>Choose a size, tap "Add to bag", then check out securely with card, Apple Pay or Google Pay. Shipping is a flat $6.95 per order.</p></details>
     </div>
   </div>
 </section>
@@ -481,8 +493,8 @@ body.lock{overflow:hidden}
       <p>Unique, handmade Islamic outfits for babies and kids up to 8 years. Sewn with love in Detroit, MI.</p>
     </div>
     <div><h4>Shop</h4><ul><li><a href="#shop" data-jump="thobe">Thobes</a></li><li><a href="#shop" data-jump="girls">For girls</a></li><li><a href="#shop" data-jump="essentials">Essentials</a></li></ul></div>
-    <div><h4>Account</h4><ul><li><a href="https://islamicbabyclothes.com/m/account">My account</a></li><li><a href="https://islamicbabyclothes.com/m/orders">Orders</a></li><li><a href="https://islamicbabyclothes.com/m/bookings">Bookings</a></li><li><a href="#" onclick="openCart();return false">Your bag</a></li></ul></div>
-    <div><h4>Info</h4><ul><li><a href="#story">Our story</a></li><li><a href="#contact">Contact</a></li><li><a href="https://islamicbabyclothes.com/privacy-policy">Privacy policy</a></li><li><a href="https://islamicbabyclothes.com/terms-of-use">Terms of use</a></li></ul></div>
+    <div><h4>Help</h4><ul><li><a href="#" onclick="openCart();return false">Your bag</a></li><li><a href="tel:+13134550054">Call (313) 455-0054</a></li><li><a href="https://www.facebook.com/Islamicbabyclothes/">Facebook</a></li><li><a href="#services">Book a session</a></li></ul></div>
+    <div><h4>Info</h4><ul><li><a href="#story">Our story</a></li><li><a href="#contact">Contact</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of use</a></li></ul></div>
   </div>
   <div class="wrap foot-bottom"><span>© <span id="yr">2026</span> Islamic Baby Clothes. All rights reserved.</span><span>Made with love 🤍</span></div>
 </footer>
@@ -500,26 +512,28 @@ body.lock{overflow:hidden}
   </div>
 </aside>
 <div class="toast" id="toast"></div>
+<div class="modal" id="infoModal" role="dialog" aria-modal="true" aria-labelledby="infoTitle"><div class="modal-box"><button class="icon-btn" id="closeInfo" aria-label="Close">×</button><div id="infoBody"></div></div></div>
+
 
 <script>
 const IMG='https://img1.wsimg.com/isteam/ip/869d7fc4-6045-4a2e-958a-303dee3172c6/';
-const SHOP='https://islamicbabyclothes.com/shop/ols/products/';
 /* ===== CHECKOUT SETTINGS =====
    Paste your Cloudflare Worker URL here once it's set up (see README.md).
    While it's empty, "Secure checkout" shows a "checkout opening soon" message. */
 const CHECKOUT_URL='https://ibc-checkout.islamic-baby-clothes-llc.workers.dev';
 const SHOP_PHONE='+13134550054';
+const THOBE=['3–6 months','6–9 months','9–12 months','12–18 months'];
 const SIZES=['3–6 months','6–9 months','9–12 months','12–18 months','18–24 months','2 years','3 years','4 years','5 years','6 years','7 years','8 years'];
 const products=[
- {n:'Decorative Hooded Thobe',c:'thobe',t:'Boys · Thobe',from:true,was:20,now:18.99,img:'IMG_6426-removebg-preview.png',id:'hooded-thobe',slug:'decorative-hooded-thobe',d:'A cozy hooded thobe with decorative detailing — adorable for Jumu\'ah and Eid.',best:true},
- {n:'Collar Style Thobe',c:'thobe',t:'Boys · Thobe',from:true,was:20,now:18.99,img:'IMG_3263-removebg-preview.png',id:'collar-thobe',slug:'collar-style-thobe',d:'A classic collared thobe with a smart, timeless look.'},
- {n:'V-Neck Style Thobe',c:'thobe',t:'Boys · Thobe',from:true,was:23,now:18.95,img:'IMG_1569-removebg-preview.png',id:'vneck-thobe',slug:'v-neck-style-thobe',d:'A clean v-neck cut that\'s easy to put on and comfy all day.'},
- {n:'Decorative Thobe',c:'thobe',t:'Boys · Thobe',from:true,was:20,now:18.95,img:'ols/IMG_5768-removebg-preview.png',id:'decorative-thobe',slug:'decorative-thobe',d:'Our elegant decorative thobe — a special piece for special days.'},
- {n:'Baby Khimar',c:'girls',t:'Girls · Khimar',from:true,was:8,now:7.96,img:'blob-84852a5.png',id:'khimar',slug:'kimars-for-all-sizes-from-3-mo-to-adult',sizes:[...['3–6 months','6–9 months','9–12 months','12–18 months','18–24 months','2 years','3 years','4 years','5 years','6 years','7 years','8 years'],'Teen','Adult'],d:'Soft, easy khimars in every size from 3 months to adult — match with mom!',best:true},
- {n:'Girls Pants',c:'girls',t:'Girls · Pants',from:true,was:8.25,now:7.95,img:'IMG_6613.JPG',id:'girls-pants',slug:'girls-pants',d:'Comfortable, modest pants to wear under dresses and abayas.'},
- {n:'Baby & Kids Kufis',c:'essentials',t:'Essentials · Kufi',from:false,was:6.95,now:5.95,img:'IMG_1101-removebg-preview.png',id:'kufi',slug:'kuffies',d:'Handmade kufi caps to complete any outfit.'},
- {n:'Baby Izars',c:'essentials',t:'Essentials · Izar',from:true,was:8,now:7.90,img:'IMG_2068-fotor-bg-remover-2024060104412.png',id:'izar',slug:'baby-izars',d:'Tiny izars made for comfort and easy movement.'},
- {n:'Boys Pants',c:'essentials',t:'Essentials · Pants',from:true,was:8.95,now:7.25,img:'ols/Photoroom_20260102_004325.JPG',id:'boys-pants',slug:'boys-pants',d:'Soft pants that pair perfectly with any thobe.'}
+ {n:'Decorative Hooded Thobe',c:'thobe',t:'Boys · Thobe',from:true,was:20,now:18.99,img:'IMG_6426-removebg-preview.png',id:'hooded-thobe',sizes:THOBE,chart:true,full:'Made from high-quality cotton/polyester fabric. This thobe features a hood, long sleeves and a convenient zippered front closure, with decorative stitching on the back yoke and around the front zipper facing.',slug:'decorative-hooded-thobe',d:'A cozy hooded thobe with decorative detailing — adorable for Jumu\'ah and Eid.',best:true},
+ {n:'Collar Style Thobe',c:'thobe',t:'Boys · Thobe',from:true,was:20,now:18.99,img:'IMG_3263-removebg-preview.png',id:'collar-thobe',sizes:THOBE,chart:true,full:'A sophisticated, stylish thobe for little boys. This blue long-sleeve thobe features a stand collar and button-down front.',slug:'collar-style-thobe',d:'A classic collared thobe with a smart, timeless look.'},
+ {n:'V-Neck Style Thobe',c:'thobe',t:'Boys · Thobe',from:true,was:23,now:18.95,img:'IMG_1569-removebg-preview.png',id:'vneck-thobe',sizes:THOBE,chart:true,full:'A plain white V-neck thobe with short sleeves, made from smooth fabric — perfect for all occasions.',slug:'v-neck-style-thobe',d:'A clean v-neck cut that\'s easy to put on and comfy all day.'},
+ {n:'Decorative Thobe',c:'thobe',t:'Boys · Thobe',from:true,was:20,now:18.95,img:'ols/IMG_5768-removebg-preview.png',id:'decorative-thobe',sizes:THOBE,chart:true,full:'Dress up your child beautifully in this decorative thobe, with decorative stitching on the front and back yokes, around the neck and along the front zipper. Long sleeves, made from cotton/polyester fabric.',slug:'decorative-thobe',d:'Our elegant decorative thobe — a special piece for special days.'},
+ {n:'Baby Khimar',c:'girls',t:'Girls · Khimar',from:true,was:8,now:7.96,img:'blob-84852a5.png',id:'khimar',slug:'kimars-for-all-sizes-from-3-mo-to-adult',sizes:['3–6 months','6–9 months','9–12 months','12–18 months','18–24 months','2 years','3 years','4 years','5 years'],full:'Our dark blue one-piece khimars are versatile, easy to put on and sewn for babies and girls from 3 months to 5 years.',d:'Soft, easy one-piece khimars for babies and little girls, 3 months to 5 years.',best:true},
+ {n:'Girls Pants',c:'girls',t:'Girls · Pants',from:true,was:8.25,now:7.95,img:'IMG_6613.JPG',id:'girls-pants',full:'Loose, modest pants with an elastic waist and a straight-leg bottom — or ask us to sew them with an elastic bottom.',slug:'girls-pants',d:'Comfortable, modest pants to wear under dresses and abayas.'},
+ {n:'Baby & Kids Kufis',c:'essentials',t:'Essentials · Kufi',from:false,was:6.95,now:5.95,img:'IMG_1101-removebg-preview.png',id:'kufi',sizes:['Baby','Boys','Men'],full:'Baby, boys and men’s kufis made with cotton/polyester fabric, with six stitched rows around the bottom and pleated under a circular top patch. Want a specific color? Call or message us after ordering.',slug:'kuffies',d:'Handmade kufi caps to complete any outfit.'},
+ {n:'Baby Izars',c:'essentials',t:'Essentials · Izar',from:true,was:8,now:7.90,img:'IMG_2068-fotor-bg-remover-2024060104412.png',id:'izar',full:'An easy on-and-off izar, great for relaxing. Elastic waist with one top-stitched seam down the front or side. Sewn with cotton/polyester fabric.',slug:'baby-izars',d:'Tiny izars made for comfort and easy movement.'},
+ {n:'Boys Pants',c:'essentials',t:'Essentials · Pants',from:true,was:8.95,now:7.25,img:'ols/Photoroom_20260102_004325.JPG',id:'boys-pants',sizes:THOBE,full:'Loose straight-leg pants with an elastic waist, sewn with polyester/cotton fabric. Made for babies 3–18 months.',slug:'boys-pants',d:'Soft pants that pair perfectly with any thobe.'}
 ];
 const grid=document.getElementById('grid');
 grid.innerHTML=products.map(p=>{
@@ -532,7 +546,7 @@ grid.innerHTML=products.map(p=>{
       <div class="price">${p.from?'<span class="from">From</span>':''}<span class="now">$${p.now.toFixed(2)}</span><span class="was">$${p.was.toFixed(2)}</span></div>
       <div class="size-row"><label for="sz-${p.id}">Size</label><select id="sz-${p.id}">${(p.sizes||SIZES).map(z=>`<option>${z}</option>`).join('')}</select></div>
       <button class="btn btn-primary" data-add="${p.id}">Add to bag</button>
-      <a class="details-link" href="${SHOP}${p.slug}" target="_blank" rel="noopener">Details & size chart</a></div></article>`}).join('');
+      <button class="details-link" data-info="${p.id}">${p.chart?'Details & size chart':'Details'}</button></div></article>`}).join('');
 
 function filter(f){
   document.querySelectorAll('.filters button').forEach(b=>b.classList.toggle('active',b.dataset.f===f));
@@ -602,6 +616,19 @@ $('checkoutBtn').onclick=async()=>{
 if(new URLSearchParams(location.search).get('order')==='success'){cart=[];save();setTimeout(()=>toast('JazakAllah khair! Your order is confirmed 🤍'),400)}
 render();
 
+/* ===== PRODUCT DETAILS ===== */
+const CHART=[['3–6M','3–6 mo','21 in (53 cm)','7.5 in (19 cm)','9 in (23 cm)','16 in (41 cm)'],['6–9M','6–9 mo','22 in (56 cm)','8 in (20 cm)','10 in (25 cm)','18 in (46 cm)'],['9–12M','9–12 mo','23 in (58 cm)','8.5 in (22 cm)','11 in (28 cm)','20 in (51 cm)'],['12–18M','12–18 mo','24.5 in (62 cm)','9 in (23 cm)','12 in (30 cm)','22 in (56 cm)']];
+function openInfo(id){const p=byId(id);
+  $('infoBody').innerHTML=`<span style="font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--sage)">${p.t}</span><h3 id="infoTitle">${p.n}</h3><p>${p.full||p.d}</p>
+  ${p.chart?`<strong>Size chart</strong><div class="chart-wrap"><table class="chart"><tr><th>Size</th><th>Age</th><th>Chest</th><th>Shoulder</th><th>Sleeve</th><th>Length (mid-calf)</th></tr>${CHART.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</table></div>`:''}
+  <p style="font-size:.9rem">Sizes: ${(p.sizes||SIZES).join(', ')}. Need something different? Every piece is custom made — call us at (313) 455-0054.</p>
+  <button class="btn btn-primary" style="width:100%" id="infoAdd">Add to bag — ${money(p.now)} (size ${$('sz-'+id).value})</button>`;
+  $('infoAdd').onclick=()=>{closeInfo();addToCart(id,$('sz-'+id).value)};
+  $('infoModal').classList.add('open');document.body.classList.add('lock')}
+function closeInfo(){$('infoModal').classList.remove('open');document.body.classList.remove('lock')}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-info]');if(b)openInfo(b.dataset.info)});
+$('closeInfo').onclick=closeInfo;$('infoModal').onclick=e=>{if(e.target.id==='infoModal')closeInfo()};
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeInfo()});
 </script>
 </body>
 </html>
