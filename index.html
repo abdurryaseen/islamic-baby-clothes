@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Islamic Baby Clothes | Handmade Thobes, Khimars & Kufis for Little Ones</title>
+<meta name="description" content="Handmade, custom Islamic clothing for babies and kids from 3 months to 8 years. Thobes, khimars, kufis, izars and more — sewn with love in Detroit, MI.">
+<meta property="og:title" content="Islamic Baby Clothes — Handmade with love in Detroit">
+<meta property="og:description" content="Custom thobes, khimars and kufis for babies and kids up to 8 years.">
+<meta property="og:image" content="https://img1.wsimg.com/isteam/ip/869d7fc4-6045-4a2e-958a-303dee3172c6/ols/PhotoRoom_20230118_205138.PNG/:/rs=w:1200,m">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#fbf6ee; --cream-2:#f4ecdf; --sand:#e9dcc6;
+  --sage:#7f9a82; --sage-d:#56705a; --sage-l:#dfe8dc;
+  --gold:#c49a52; --gold-d:#9c7533;
+  --ink:#2f3a33; --muted:#6b736c; --white:#fff; --rose:#c9776b;
+  --radius:22px; --shadow:0 18px 40px -18px rgba(47,58,51,.28);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Nunito,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;font-weight:600}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-d)}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:999px;font-weight:800;font-size:1rem;transition:.25s;border:2px solid transparent;cursor:pointer}
+.btn-primary{background:var(--sage-d);color:#fff;box-shadow:0 10px 24px -10px rgba(86,112,90,.8)}
+.btn-primary:hover{background:var(--ink);transform:translateY(-2px)}
+.btn-ghost{border-color:var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-gold:hover{background:var(--gold-d)}
+section{padding:96px 0}
+.pattern{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23c49a52' stroke-opacity='.18' stroke-width='1.2'%3E%3Cpath d='M40 4l10 26 26 10-26 10-10 26-10-26L4 40l26-10z'/%3E%3Ccircle cx='40' cy='40' r='9'/%3E%3C/g%3E%3C/svg%3E")}
+
+/* announcement */
+.announce{background:var(--ink);color:#f3e7cf;font-size:.9rem;font-weight:700;text-align:center;padding:10px 16px}
+.announce b{color:var(--gold)}
+
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(251,246,238,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,154,82,.2)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+.logo{display:flex;align-items:center;gap:12px;font-family:Fraunces,serif;font-weight:700;font-size:1.25rem}
+.logo img{height:46px;width:auto}
+.nav ul{display:flex;gap:30px;list-style:none;font-weight:700}
+.nav ul a{position:relative;padding:6px 0}
+.nav ul a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--gold);transition:.25s}
+.nav ul a:hover::after{width:100%}
+.nav .btn{padding:11px 22px;font-size:.95rem}
+.menu-btn{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--ink)}
+
+/* hero */
+.hero{padding:72px 0 96px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.5rem,5.4vw,4.3rem);margin:18px 0 20px;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--sage-d)}
+.hero p.lead{font-size:1.18rem;color:var(--muted);max-width:520px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin:34px 0 36px}
+.hero-stats{display:flex;gap:32px;flex-wrap:wrap}
+.hero-stats div strong{display:block;font-family:Fraunces,serif;font-size:1.7rem;color:var(--sage-d)}
+.hero-stats div span{font-size:.9rem;color:var(--muted);font-weight:600}
+.hero-art{position:relative;justify-self:center;width:min(460px,100%)}
+.arch{aspect-ratio:4/5;border-radius:240px 240px 28px 28px;overflow:hidden;background:var(--sage-l);box-shadow:var(--shadow);border:10px solid #fff;position:relative}
+.arch img{width:100%;height:100%;object-fit:cover}
+.hero-art .ring{position:absolute;inset:-26px -26px auto auto;width:130px;height:130px;border-radius:50%;border:2px dashed var(--gold);animation:spin 30s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.float-card{position:absolute;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px;font-weight:700;font-size:.92rem}
+.float-card .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:1.2rem}
+.fc1{left:-40px;bottom:70px;animation:bob 5s ease-in-out infinite}
+.fc2{right:-30px;top:110px;animation:bob 6s ease-in-out infinite reverse}
+.fc1 .ic{background:var(--sage-l)} .fc2 .ic{background:#f6e7cb}
+.float-card small{display:block;color:var(--muted);font-weight:600;font-size:.78rem}
+@keyframes bob{50%{transform:translateY(-10px)}}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;z-index:-1}
+
+/* trust strip */
+.trust{background:#fff;border-block:1px solid var(--sand);padding:28px 0}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.trust-item{display:flex;gap:14px;align-items:center}
+.trust-item .ic{flex:none;width:48px;height:48px;border-radius:50%;background:var(--cream-2);display:grid;place-items:center;font-size:1.3rem}
+.trust-item strong{display:block;font-size:.98rem}
+.trust-item span{font-size:.85rem;color:var(--muted)}
+
+/* section heads */
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:42px;flex-wrap:wrap}
+.head h2{font-size:clamp(2rem,3.6vw,2.9rem);margin-top:10px}
+.head p{color:var(--muted);max-width:440px}
+
+/* categories */
+.cats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.cat{position:relative;border-radius:var(--radius);overflow:hidden;padding:28px;min-height:260px;display:flex;flex-direction:column;justify-content:flex-end;transition:.3s;cursor:pointer}
+.cat:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.cat img{position:absolute;right:-10px;top:10px;height:78%;width:auto;object-fit:contain;transition:.4s;filter:drop-shadow(0 12px 18px rgba(0,0,0,.15))}
+.cat:hover img{transform:scale(1.06) rotate(-2deg)}
+.cat h3{font-size:1.6rem;position:relative}
+.cat p{position:relative;font-weight:700;color:var(--ink);opacity:.75;font-size:.95rem}
+.cat-1{background:#e4ebe1} .cat-2{background:#f5e6d6} .cat-3{background:#efe4c9}
+
+/* products */
+.filters{display:flex;gap:10px;flex-wrap:wrap}
+.filters button{border:1.5px solid var(--sand);background:#fff;padding:9px 18px;border-radius:999px;font:700 .92rem Nunito,sans-serif;color:var(--ink);cursor:pointer;transition:.2s}
+.filters button.active,.filters button:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 18px -10px rgba(47,58,51,.18);transition:.3s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.card .img{position:relative;aspect-ratio:1/1;background:radial-gradient(circle at 50% 60%,#fff 0%,var(--cream-2) 75%);display:grid;place-items:center;overflow:hidden}
+.card .img img{width:84%;height:84%;object-fit:contain;transition:.45s;filter:drop-shadow(0 14px 16px rgba(0,0,0,.12))}
+.card:hover .img img{transform:scale(1.07)}
+.badge{position:absolute;top:16px;left:16px;background:var(--rose);color:#fff;font-weight:800;font-size:.75rem;letter-spacing:.06em;padding:6px 12px;border-radius:999px;text-transform:uppercase}
+.badge.best{left:auto;right:16px;background:var(--gold)}
+.card .body{padding:22px 24px 24px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .tag{font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--sage)}
+.card h3{font-size:1.3rem}
+.card .desc{color:var(--muted);font-size:.93rem;flex:1}
+.price{display:flex;align-items:baseline;gap:10px;margin:8px 0 14px}
+.price .from{font-size:.82rem;color:var(--muted);font-weight:700}
+.price .now{font-family:Fraunces,serif;font-size:1.55rem;font-weight:700;color:var(--sage-d)}
+.price .was{text-decoration:line-through;color:#a3a69f;font-weight:600}
+.card .btn{width:100%;padding:13px}
+.hidden{display:none!important}
+
+/* process */
+.process{background:var(--ink);color:#f4ecdf;position:relative;overflow:hidden}
+.process .eyebrow{color:var(--gold)}
+.process .head p{color:#c8c4b6}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;counter-reset:s}
+.step{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:34px 30px;position:relative}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:Fraunces,serif;font-size:3.2rem;color:var(--gold);opacity:.9;line-height:1}
+.step h3{font-size:1.4rem;margin:18px 0 10px;color:#fff}
+.step p{color:#c8c4b6}
+
+/* story */
+.story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.story-img{position:relative}
+.story-img .frame{border-radius:var(--radius);overflow:hidden;background:var(--sage-l);aspect-ratio:4/5;box-shadow:var(--shadow)}
+.story-img .frame img{width:100%;height:100%;object-fit:cover}
+.story-img .stamp{position:absolute;right:-24px;bottom:36px;background:var(--gold);color:#fff;width:132px;height:132px;border-radius:50%;display:grid;place-items:center;text-align:center;font-family:Fraunces,serif;font-weight:600;line-height:1.2;box-shadow:var(--shadow);border:6px solid var(--cream);font-size:1rem;padding:10px}
+.story h2{font-size:clamp(2rem,3.6vw,2.8rem);margin:12px 0 20px}
+.story p{color:var(--muted);font-size:1.08rem;margin-bottom:16px}
+.checks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:26px 0 32px}
+.checks li{display:flex;gap:10px;font-weight:700}
+.checks li::before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;background:var(--sage-l);color:var(--sage-d);display:grid;place-items:center;font-size:.8rem}
+
+/* services */
+.services{background:var(--cream-2)}
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.svc{background:#fff;border-radius:var(--radius);padding:36px;display:flex;gap:24px;align-items:flex-start;box-shadow:0 4px 18px -10px rgba(47,58,51,.18)}
+.svc .ic{flex:none;width:64px;height:64px;border-radius:18px;display:grid;place-items:center;font-size:1.8rem;background:var(--sage-l)}
+.svc h3{font-size:1.45rem}
+.svc .meta{display:flex;gap:10px;margin:8px 0 12px;flex-wrap:wrap}
+.svc .meta span{background:var(--cream-2);padding:4px 12px;border-radius:999px;font-weight:800;font-size:.82rem}
+.svc .meta .free{background:var(--sage-d);color:#fff}
+.svc p{color:var(--muted);margin-bottom:18px}
+
+/* reviews CTA */
+.reviews{text-align:center}
+.reviews .box{background:#fff;border-radius:32px;padding:64px 32px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.stars{font-size:1.8rem;color:var(--gold);letter-spacing:6px}
+.reviews h2{font-size:clamp(1.9rem,3.4vw,2.6rem);margin:12px 0 14px}
+.reviews p{color:var(--muted);max-width:560px;margin:0 auto 28px;font-size:1.08rem}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+details{background:#fff;border-radius:18px;padding:20px 24px;margin-bottom:14px;border:1px solid var(--sand)}
+summary{font-weight:800;font-size:1.05rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;color:var(--gold-d);line-height:1;transition:.2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);margin-top:12px}
+
+/* contact */
+.contact{background:linear-gradient(135deg,var(--sage-d),#3f5544);color:#fff;border-radius:32px;padding:64px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative;overflow:hidden}
+.contact .eyebrow{color:#f0d9a8}.contact .eyebrow::before{background:#f0d9a8}
+.contact h2{font-size:clamp(2rem,3.6vw,2.8rem);margin:12px 0 16px}
+.contact p{color:#dfe8dc;font-size:1.08rem}
+.contact-list{display:grid;gap:14px}
+.contact-list a,.contact-list div{display:flex;gap:16px;align-items:center;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:16px 20px;border-radius:18px;transition:.2s;font-weight:700}
+.contact-list a:hover{background:rgba(255,255,255,.2);transform:translateX(4px)}
+.contact-list .ic{font-size:1.4rem;width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.15);display:grid;place-items:center;flex:none}
+.contact-list small{display:block;font-weight:600;color:#cfdccd;font-size:.82rem}
+
+/* footer */
+footer{background:var(--ink);color:#c8c4b6;padding:64px 0 28px;margin-top:96px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
+footer h4{color:#fff;font-family:Fraunces,serif;font-size:1.1rem;margin-bottom:14px;font-weight:600}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a:hover{color:var(--gold)}
+.foot-brand p{margin-top:12px;max-width:300px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding-top:22px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.9rem}
+
+/* sticky mobile cta */
+.mobile-cta{display:none}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:980px){
+  .hero-grid,.story-grid,.faq-grid,.contact{grid-template-columns:1fr}
+  .hero-art{margin-top:20px}
+  .grid,.cats,.steps{grid-template-columns:1fr 1fr}
+  .trust-grid{grid-template-columns:1fr 1fr}
+  .svc-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .contact{padding:44px 28px}
+  .story-img{max-width:440px}
+}
+@media (max-width:760px){
+  section{padding:68px 0}
+  .nav ul{display:none;position:absolute;top:76px;left:0;right:0;background:var(--cream);flex-direction:column;gap:0;padding:8px 16px 16px;border-bottom:1px solid var(--sand)}
+  .nav ul.open{display:flex}
+  .nav ul a{display:block;padding:14px 0;border-bottom:1px solid var(--sand)}
+  .menu-btn{display:block}
+  .nav .btn{display:none}
+  .logo span{font-size:1.05rem}
+  .grid,.cats,.steps{grid-template-columns:1fr}
+  .checks{grid-template-columns:1fr}
+  .fc1{left:-8px;bottom:30px}.fc2{right:-8px;top:40px}
+  .hero-art .ring{display:none}
+  .story-img .stamp{right:8px;width:110px;height:110px;font-size:.88rem}
+  .svc{flex-direction:column;padding:28px}
+  .mobile-cta{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;gap:10px}
+  .mobile-cta a{flex:1;padding:14px}
+  footer{padding-bottom:96px}
+}
+@media (max-width:480px){
+  .trust-grid,.foot-grid{grid-template-columns:1fr}
+  .hero-stats{gap:22px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="announce">🌙 Handmade to order in Detroit &nbsp;·&nbsp; <b>Sale prices</b> on every outfit right now</div>
+
+<header>
+  <nav class="nav wrap">
+    <a href="#top" class="logo"><img src="https://img1.wsimg.com/isteam/ip/125e2687-ebda-4660-9861-3a23018bcaef/logo-islamic-baby-clothes-30e62e.png/:/rs=h:140,cg:true,m/qt=q:95" alt="Islamic Baby Clothes logo"><span>Islamic Baby Clothes</span></a>
+    <ul id="menu">
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#story">Our story</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary" href="https://islamicbabyclothes.com/shop">Shop all →</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" id="menuBtn">☰</button>
+  </nav>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero pattern">
+  <div class="blob" style="width:380px;height:380px;background:#dfe8dc;left:-120px;top:40px"></div>
+  <div class="blob" style="width:320px;height:320px;background:#f3dfbd;right:-60px;bottom:-40px"></div>
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow">Custom Islamic baby clothing</span>
+      <h1>Little thobes, <em>big</em> blessings.</h1>
+      <p class="lead">Unique, handmade thobes, khimars and kufis for babies and kids from 3 months to 8 years — sewn with love so your little one looks beautiful and feels comfortable for Jumu'ah, Eid and every day.</p>
+      <div class="hero-ctas">
+        <a href="#shop" class="btn btn-primary">Shop the collection →</a>
+        <a href="#services" class="btn btn-ghost">Book a free design chat</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>100%</strong><span>Handmade</span></div>
+        <div><strong>3m–8y</strong><span>Sizes available</span></div>
+        <div><strong>From $5.95</strong><span>Sale prices</span></div>
+      </div>
+    </div>
+    <div class="hero-art reveal">
+      <div class="ring"></div>
+      <div class="arch"><img src="https://img1.wsimg.com/isteam/ip/869d7fc4-6045-4a2e-958a-303dee3172c6/ols/PhotoRoom_20230118_205138.PNG/:/rs=w:900,m" alt="Child wearing a handmade Islamic thobe"></div>
+      <div class="float-card fc1"><div class="ic">🧵</div><div>Made to order<small>Sewn just for your child</small></div></div>
+      <div class="float-card fc2"><div class="ic">🌙</div><div>Eid-ready<small>Thobes & khimars</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="wrap trust-grid">
+    <div class="trust-item"><div class="ic">🤲</div><div><strong>Handmade with love</strong><span>Every piece sewn by hand</span></div></div>
+    <div class="trust-item"><div class="ic">📏</div><div><strong>Custom sizing</strong><span>3 months up to 8 years</span></div></div>
+    <div class="trust-item"><div class="ic">☁️</div><div><strong>Comfy & modest</strong><span>Stylish, easy to wear</span></div></div>
+    <div class="trust-item"><div class="ic">📍</div><div><strong>Detroit, MI</strong><span>Small family business</span></div></div>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<section>
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="eyebrow">Shop by category</span><h2>Something for every little one</h2></div>
+      <p>From flowing thobes for boys to soft khimars for girls — find the perfect piece for the masjid, family gatherings or Eid.</p>
+    </div>
+    <div class="cats">
+      <a class="cat cat-1 reveal" href="#shop" data-jump="thobe"><img src="https://img1.wsimg.com/isteam/ip/869d7fc4-6045-4a2e-958a-303dee3172c6/IMG_6426-removebg-preview.png/:/rs=w:500" alt="Hooded thobe"><h3>Thobes</h3><p>4 styles · from $18.95</p></a>
+      <a class="cat cat-2 reveal" href="#shop" data-jump="girls"><img src="https://img1.wsimg.com/isteam/ip/869d7fc4-6045-4a2e-958a-303dee3172c6/blob-84852a5.png/:/rs=w:500" alt="Baby khimar"><h3>For girls</h3><p>Khimars & pants · from $7.95</p></a>
+      <a class="cat cat-3 reveal" href="#shop" data-jump="essentials"><img src="https://img1.wsimg.com/isteam/ip/869d7fc4-6045-4a2e-958a-303dee3172c6/IMG_1101-removebg-preview.png/:/rs=w:500" alt="Kufi caps"><h3>Essentials</h3><p>Kufis, izars & pants · from $5.95</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="shop" style="padding-top:0">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="eyebrow">Featured products</span><h2>Our best-loved pieces</h2></div>
+      <div class="filters" role="tablist">
+        <button class="active" data-f="all">All</button>
+        <button data-f="thobe">Thobes</button>
+        <button data-f="girls">Girls</button>
+        <button data-f="essentials">Essentials</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div style="text-align:center;margin-top:44px" class="reveal"><a href="https://islamicbabyclothes.com/shop" class="btn btn-ghost">View the full shop →</a></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process pattern" id="how">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="eyebrow">How it works</span><h2>Made just for your child<br>in 3 simple steps</h2></div>
+      <p>Every outfit is handmade to order, so it's made to fit and made to last.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Choose your style</h3><p>Pick a thobe, khimar, kufi or set from the shop — or book a free 15-minute design chat to plan something custom.</p></div>
+      <div class="step reveal"><h3>Select the size</h3><p>Sizes from 3 months up to 8 years. Not sure? Call or message us and we'll help you get the right fit.</p></div>
+      <div class="step reveal"><h3>We sew it with love</h3><p>Your piece is handmade in Detroit with care and attention to detail — ready for Jumu'ah, Eid and every day.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+  <div class="wrap story-grid">
+    <div class="story-img reveal">
+      <div class="frame"><img src="https://img1.wsimg.com/isteam/ip/869d7fc4-6045-4a2e-958a-303dee3172c6/CF49EC3C-998F-5F32-0D5C-DBD9CA7687C4.jpg/:/rs=w:800" alt="Handmade Islamic children's clothing"></div>
+      <div class="stamp">Handmade in Detroit</div>
+    </div>
+    <div class="story reveal">
+      <span class="eyebrow">Our story</span>
+      <h2>Clothing that helps little Muslims shine</h2>
+      <p>At Islamic Baby Clothes, we are passionate about providing high-quality, custom-made clothing for babies and children aged 3 months to 8 years.</p>
+      <p>Each piece is handmade with love, ensuring that your child looks stylish and feels comfortable — whether they're heading to the masjid, celebrating Eid, or meeting family for the very first time.</p>
+      <ul class="checks">
+        <li>Handmade, never mass-produced</li>
+        <li>Custom sizes & styles</li>
+        <li>Soft, comfortable fabrics</li>
+        <li>Family-run in Detroit, MI</li>
+      </ul>
+      <a href="#shop" class="btn btn-primary">Find their outfit →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><span class="eyebrow">Online appointments</span><h2>Let's design it together</h2></div>
+      <p>Have something special in mind? Book a quick session and we'll bring your idea to life — or learn to sew it yourself.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc reveal"><div class="ic">✏️</div><div><h3>Outfit Design</h3><div class="meta"><span class="free">FREE</span><span>15 mins</span></div><p>Tell us your vision — colors, embroidery, occasion — and we'll design a custom outfit that's uniquely your child's.</p><a class="btn btn-primary" href="https://islamicbabyclothes.com/m/bookings">Book free chat</a></div></div>
+      <div class="svc reveal"><div class="ic" style="background:#f6e7cb">🪡</div><div><h3>Sewing Coaching</h3><div class="meta"><span>$25</span><span>30 mins</span></div><p>Learn the craft one-on-one. Get personal guidance on patterns, stitching and finishing your own children's clothing.</p><a class="btn btn-gold" href="https://islamicbabyclothes.com/m/bookings">Book a session</a></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS CTA -->
+<section class="reviews">
+  <div class="wrap">
+    <div class="box pattern reveal">
+      <div class="stars">★★★★★</div>
+      <h2>Share your little one's look</h2>
+      <p>We love our customers! Bought one of our outfits? We'd be so grateful if you shared a photo or a few words with us on Facebook — it helps other families find us.</p>
+      <a class="btn btn-primary" href="https://www.facebook.com/159040034158552">Leave a review on Facebook</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding-top:0">
+  <div class="wrap faq-grid">
+    <div class="reveal">
+      <span class="eyebrow">Questions</span>
+      <h2 style="font-size:clamp(2rem,3.6vw,2.6rem);margin:12px 0 16px">Good to know</h2>
+      <p style="color:var(--muted);margin-bottom:24px">Can't find your answer? Give us a call — we're happy to help.</p>
+      <a href="tel:+13134550054" class="btn btn-ghost">📞 (313) 455-0054</a>
+    </div>
+    <div class="reveal">
+      <details open><summary>What ages and sizes do you make?</summary><p>We make clothing for babies and children from 3 months up to 8 years old. Khimars are available in sizes from 3 months all the way to adult.</p></details>
+      <details><summary>Are the clothes really handmade?</summary><p>Yes — every piece is custom made by hand with love, so your child gets a unique outfit that's comfortable and made to last.</p></details>
+      <details><summary>Can I request a custom design?</summary><p>Absolutely. Book a free 15-minute Outfit Design session and we'll work with you on style, colors and details.</p></details>
+      <details><summary>How do I place an order?</summary><p>Tap "Shop now" on any product to choose your size and options, then check out securely in our online store.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="contact reveal">
+      <div>
+        <span class="eyebrow">Contact us</span>
+        <h2>Drop us a line!</h2>
+        <p>We love our customers. Feel free to contact us at any time — for sizing help, custom orders, or just to say salaam.</p>
+      </div>
+      <div class="contact-list">
+        <a href="tel:+13134550054"><span class="ic">📞</span><span>(313) 455-0054<small>Call or text us</small></span></a>
+        <a href="https://www.facebook.com/159040034158552"><span class="ic">💬</span><span>Message us on Facebook<small>We reply as soon as we can</small></span></a>
+        <a href="https://maps.google.com/?q=2954+Grant+St,+Detroit,+MI"><span class="ic">📍</span><span>2954 Grant St, Detroit, MI<small>Get directions</small></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <div class="logo" style="color:#fff">Islamic Baby Clothes</div>
+      <p>Unique, handmade Islamic outfits for babies and kids up to 8 years. Sewn with love in Detroit, MI.</p>
+    </div>
+    <div><h4>Shop</h4><ul><li><a href="#shop" data-jump="thobe">Thobes</a></li><li><a href="#shop" data-jump="girls">For girls</a></li><li><a href="#shop" data-jump="essentials">Essentials</a></li><li><a href="https://islamicbabyclothes.com/shop">Full shop</a></li></ul></div>
+    <div><h4>Account</h4><ul><li><a href="https://islamicbabyclothes.com/m/account">My account</a></li><li><a href="https://islamicbabyclothes.com/m/orders">Orders</a></li><li><a href="https://islamicbabyclothes.com/m/bookings">Bookings</a></li><li><a href="https://islamicbabyclothes.com/shop?olsPage=cart">Cart</a></li></ul></div>
+    <div><h4>Info</h4><ul><li><a href="#story">Our story</a></li><li><a href="#contact">Contact</a></li><li><a href="https://islamicbabyclothes.com/privacy-policy">Privacy policy</a></li><li><a href="https://islamicbabyclothes.com/terms-of-use">Terms of use</a></li></ul></div>
+  </div>
+  <div class="wrap foot-bottom"><span>© <span id="yr">2026</span> Islamic Baby Clothes. All rights reserved.</span><span>Made with love 🤍</span></div>
+</footer>
+
+<div class="mobile-cta"><a class="btn btn-primary" href="#shop">Shop now</a><a class="btn btn-gold" href="tel:+13134550054">Call us</a></div>
+
+<script>
+const IMG='https://img1.wsimg.com/isteam/ip/869d7fc4-6045-4a2e-958a-303dee3172c6/';
+const SHOP='https://islamicbabyclothes.com/shop/ols/products/';
+const products=[
+ {n:'Decorative Hooded Thobe',c:'thobe',t:'Boys · Thobe',from:true,was:20,now:18.99,img:'IMG_6426-removebg-preview.png',slug:'decorative-hooded-thobe',d:'A cozy hooded thobe with decorative detailing — adorable for Jumu\'ah and Eid.',best:true},
+ {n:'Collar Style Thobe',c:'thobe',t:'Boys · Thobe',from:true,was:20,now:18.99,img:'IMG_3263-removebg-preview.png',slug:'collar-style-thobe',d:'A classic collared thobe with a smart, timeless look.'},
+ {n:'V-Neck Style Thobe',c:'thobe',t:'Boys · Thobe',from:true,was:23,now:18.95,img:'IMG_1569-removebg-preview.png',slug:'v-neck-style-thobe',d:'A clean v-neck cut that\'s easy to put on and comfy all day.'},
+ {n:'Decorative Thobe',c:'thobe',t:'Boys · Thobe',from:true,was:20,now:18.95,img:'ols/IMG_5768-removebg-preview.png',slug:'decorative-thobe',d:'Our elegant decorative thobe — a special piece for special days.'},
+ {n:'Baby Khimar',c:'girls',t:'Girls · Khimar',from:true,was:8,now:7.96,img:'blob-84852a5.png',slug:'kimars-for-all-sizes-from-3-mo-to-adult',d:'Soft, easy khimars in every size from 3 months to adult — match with mom!',best:true},
+ {n:'Girls Pants',c:'girls',t:'Girls · Pants',from:true,was:8.25,now:7.95,img:'IMG_6613.JPG',slug:'girls-pants',d:'Comfortable, modest pants to wear under dresses and abayas.'},
+ {n:'Baby & Kids Kufis',c:'essentials',t:'Essentials · Kufi',from:false,was:6.95,now:5.95,img:'IMG_1101-removebg-preview.png',slug:'kuffies',d:'Handmade kufi caps to complete any outfit.'},
+ {n:'Baby Izars',c:'essentials',t:'Essentials · Izar',from:true,was:8,now:7.90,img:'IMG_2068-fotor-bg-remover-2024060104412.png',slug:'baby-izars',d:'Tiny izars made for comfort and easy movement.'},
+ {n:'Boys Pants',c:'essentials',t:'Essentials · Pants',from:true,was:8.95,now:7.25,img:'ols/Photoroom_20260102_004325.JPG',slug:'boys-pants',d:'Soft pants that pair perfectly with any thobe.'}
+];
+const grid=document.getElementById('grid');
+grid.innerHTML=products.map(p=>{
+  const pct=Math.round((1-p.now/p.was)*100);
+  const badge=pct>=10?`Save ${pct}%`:'Sale';
+  return `<article class="card reveal" data-c="${p.c}">
+    <div class="img"><span class="badge">${badge}</span>${p.best?'<span class="badge best">Popular</span>':''}
+      <img loading="lazy" src="${IMG}${p.img}/:/rs=w:600" alt="${p.n}"></div>
+    <div class="body"><span class="tag">${p.t}</span><h3>${p.n}</h3><p class="desc">${p.d}</p>
+      <div class="price">${p.from?'<span class="from">From</span>':''}<span class="now">$${p.now.toFixed(2)}</span><span class="was">$${p.was.toFixed(2)}</span></div>
+      <a class="btn btn-primary" href="${SHOP}${p.slug}">Shop now →</a></div></article>`}).join('');
+
+function filter(f){
+  document.querySelectorAll('.filters button').forEach(b=>b.classList.toggle('active',b.dataset.f===f));
+  document.querySelectorAll('.card').forEach(c=>c.classList.toggle('hidden',f!=='all'&&c.dataset.c!==f));
+}
+document.querySelectorAll('.filters button').forEach(b=>b.onclick=()=>filter(b.dataset.f));
+document.querySelectorAll('[data-jump]').forEach(a=>a.addEventListener('click',()=>filter(a.dataset.jump)));
+
+const menu=document.getElementById('menu'),mb=document.getElementById('menuBtn');
+mb.onclick=()=>{const o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)};
+menu.querySelectorAll('a').forEach(a=>a.onclick=()=>menu.classList.remove('open'));
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
