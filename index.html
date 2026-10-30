@@ -66,7 +66,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,246,238,.88);backdro
 .hero-stats div span{font-size:.9rem;color:var(--muted);font-weight:600}
 .hero-art{position:relative;justify-self:center;width:min(460px,100%)}
 .arch{aspect-ratio:4/5;border-radius:240px 240px 28px 28px;overflow:hidden;background:var(--sage-l);box-shadow:var(--shadow);border:10px solid #fff;position:relative}
-.arch img{width:100%;height:100%;object-fit:cover}
+.arch img{width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply}
 .hero-art .ring{position:absolute;inset:-26px -26px auto auto;width:130px;height:130px;border-radius:50%;border:2px dashed var(--gold);animation:spin 30s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 .float-card{position:absolute;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px;font-weight:700;font-size:.92rem}
@@ -95,7 +95,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,246,238,.88);backdro
 .cats{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .cat{position:relative;border-radius:var(--radius);overflow:hidden;padding:28px;min-height:260px;display:flex;flex-direction:column;justify-content:flex-end;transition:.3s;cursor:pointer}
 .cat:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-.cat img{position:absolute;right:-10px;top:10px;height:78%;width:auto;object-fit:contain;transition:.4s;filter:drop-shadow(0 12px 18px rgba(0,0,0,.15))}
+.cat img{mix-blend-mode:multiply;position:absolute;right:-10px;top:10px;height:78%;width:auto;object-fit:contain;transition:.4s;}
 .cat:hover img{transform:scale(1.06) rotate(-2deg)}
 .cat h3{font-size:1.6rem;position:relative}
 .cat p{position:relative;font-weight:700;color:var(--ink);opacity:.75;font-size:.95rem}
@@ -109,7 +109,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,246,238,.88);backdro
 .card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 18px -10px rgba(47,58,51,.18);transition:.3s;display:flex;flex-direction:column}
 .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
 .card .img{position:relative;aspect-ratio:1/1;background:radial-gradient(circle at 50% 60%,#fff 0%,var(--cream-2) 75%);display:grid;place-items:center;overflow:hidden}
-.card .img img{width:84%;height:84%;object-fit:contain;transition:.45s;filter:drop-shadow(0 14px 16px rgba(0,0,0,.12))}
+.card .img img{mix-blend-mode:multiply;width:84%;height:84%;object-fit:contain;transition:.45s}
 .card:hover .img img{transform:scale(1.07)}
 .badge{position:absolute;top:16px;left:16px;background:var(--rose);color:#fff;font-weight:800;font-size:.75rem;letter-spacing:.06em;padding:6px 12px;border-radius:999px;text-transform:uppercase}
 .badge.best{left:auto;right:16px;background:var(--gold)}
@@ -276,7 +276,7 @@ footer a:hover{color:var(--gold)}
     </div>
     <div class="hero-art reveal">
       <div class="ring"></div>
-      <div class="arch"><img src="https://img1.wsimg.com/isteam/ip/869d7fc4-6045-4a2e-958a-303dee3172c6/ols/PhotoRoom_20230118_205138.PNG/:/rs=w:900,m" alt="Child wearing a handmade Islamic thobe"></div>
+      <div class="arch"><img src="https://img1.wsimg.com/isteam/ip/869d7fc4-6045-4a2e-958a-303dee3172c6/ols/PhotoRoom_20230118_205138.PNG/:/rs=w:900,m" alt="Handmade hooded Islamic thobe for kids"></div>
       <div class="float-card fc1"><div class="ic">🧵</div><div>Made to order<small>Sewn just for your child</small></div></div>
       <div class="float-card fc2"><div class="ic">🌙</div><div>Eid-ready<small>Thobes & khimars</small></div></div>
     </div>
