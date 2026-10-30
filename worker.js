@@ -46,6 +46,11 @@ export default {
     form.append('cancel_url', returnUrl);
     form.append('shipping_address_collection[allowed_countries][0]', 'US');
     form.append('phone_number_collection[enabled]', 'true');
+    // Flat-rate shipping: $6.95 per order.
+    form.append('shipping_options[0][shipping_rate_data][type]', 'fixed_amount');
+    form.append('shipping_options[0][shipping_rate_data][display_name]', 'Standard shipping');
+    form.append('shipping_options[0][shipping_rate_data][fixed_amount][amount]', '695');
+    form.append('shipping_options[0][shipping_rate_data][fixed_amount][currency]', 'usd');
 
     let n = 0;
     for (const it of items) {

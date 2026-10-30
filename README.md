@@ -6,7 +6,7 @@ Live site: https://abdurryaseen.github.io/islamic-baby-clothes/
 
 Shoppers pick a size, add items to their bag, and check out. The bag is saved in their browser.
 
-**Right now (before Stripe is connected):** "Secure checkout" shows a message that online checkout is opening soon, with the phone number to call.
+**Status:** Live. Checkout runs through the `ibc-checkout` Cloudflare Worker (Islamic Baby Clothes LLC account) and Stripe. Shipping is a flat $6.95 per order (set in `worker.js`).
 
 **To turn on card payments with Stripe (about 15 minutes, one time):**
 
