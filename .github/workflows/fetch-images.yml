@@ -1,0 +1,40 @@
+# One-time job: copies the product photos from the old GoDaddy site into images/
+# so the website no longer depends on GoDaddy. Safe to delete after it has run.
+name: Copy product photos into repo
+on:
+  push:
+    paths: ['.github/workflows/fetch-images.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download photos
+        run: |
+          set -e
+          mkdir -p images
+          B=https://img1.wsimg.com/isteam/ip/869d7fc4-6045-4a2e-958a-303dee3172c6
+          L=https://img1.wsimg.com/isteam/ip/125e2687-ebda-4660-9861-3a23018bcaef
+          get(){ curl -fsSL --retry 3 -A "Mozilla/5.0" "$1" -o "images/$2"; echo "$2 $(wc -c < images/$2) bytes"; }
+          get "$L/logo-islamic-baby-clothes-30e62e.png/:/rs=h:140,cg:true,m/qt=q:95" logo.png
+          get "$B/ols/PhotoRoom_20230118_205138.PNG/:/rs=w:1200,m" hero.png
+          get "$B/CF49EC3C-998F-5F32-0D5C-DBD9CA7687C4.jpg/:/rs=w:900" story.jpg
+          get "$B/IMG_6426-removebg-preview.png/:/rs=w:700" hooded-thobe.png
+          get "$B/IMG_3263-removebg-preview.png/:/rs=w:700" collar-thobe.png
+          get "$B/IMG_1569-removebg-preview.png/:/rs=w:700" vneck-thobe.png
+          get "$B/ols/IMG_5768-removebg-preview.png/:/rs=w:700" decorative-thobe.png
+          get "$B/blob-84852a5.png/:/rs=w:700" khimar.png
+          get "$B/IMG_6613.JPG/:/rs=w:700" girls-pants.jpg
+          get "$B/IMG_1101-removebg-preview.png/:/rs=w:700" kufi.png
+          get "$B/IMG_2068-fotor-bg-remover-2024060104412.png/:/rs=w:700" izar.png
+          get "$B/ols/Photoroom_20260102_004325.JPG/:/rs=w:700" boys-pants.jpg
+      - name: Commit photos
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add images
+          git diff --cached --quiet || git commit -m "Copy product photos from old GoDaddy site"
+          git push
