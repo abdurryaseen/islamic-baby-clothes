@@ -31,10 +31,24 @@ jobs:
           get "$B/IMG_1101-removebg-preview.png/:/rs=w:700" kufi.png
           get "$B/IMG_2068-fotor-bg-remover-2024060104412.png/:/rs=w:700" izar.png
           get "$B/ols/Photoroom_20260102_004325.JPG/:/rs=w:700" boys-pants.jpg
+          get "$L/logo-islamic-baby-clothes-30e62e.png" logo-full.png
+      - name: Make favicons from the logo
+        run: |
+          set -e
+          command -v convert >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick)
+          convert images/logo-full.png -background "#fbf6ee" -alpha remove -alpha off -fuzz 6% -trim +repage /tmp/t.png
+          S=$(identify -format "%[fx:max(w,h)]" /tmp/t.png)
+          convert /tmp/t.png -gravity center -background "#fbf6ee" -extent "${S}x${S}" /tmp/sq.png
+          convert /tmp/sq.png -resize 512x512 -bordercolor "#fbf6ee" -border 16 -resize 512x512 favicon-512.png
+          convert favicon-512.png -resize 192x192 favicon-192.png
+          convert favicon-512.png -resize 180x180 apple-touch-icon.png
+          convert favicon-512.png -resize 32x32 favicon-32.png
+          convert favicon-512.png -define icon:auto-resize=48,32,16 favicon.ico
+          identify favicon-512.png favicon-32.png favicon.ico
       - name: Commit photos
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add images
-          git diff --cached --quiet || git commit -m "Copy product photos from old GoDaddy site"
+          git add images favicon-512.png favicon-192.png favicon-32.png favicon.ico apple-touch-icon.png
+          git diff --cached --quiet || git commit -m "Add logo and favicons"
           git push
